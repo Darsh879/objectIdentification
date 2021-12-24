@@ -1,17 +1,17 @@
 img = "";
-object = [];
+objects = [];
 status = "";
 function setup()
 {
     canvas = createCanvas(640, 420);
     canvas.center();
 
-    obejectDetector = ml5.objectDetector("cocossd", modelLoaded);
+    objectDetector = ml5.objectDetector("cocossd", modelLoaded);
 }
 
 function modelLoaded()
 {
-console.log("modelLoaded")
+console.log("modelLoaded");
 status = true;
 objectDetector.detect(img, gotResult);
 }
